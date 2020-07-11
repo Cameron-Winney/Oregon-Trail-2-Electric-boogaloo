@@ -28,7 +28,7 @@ class Wagon {
     }
     join(Traveler) {
         if(this.capacity - this.passengers.length == 0) {
-            return "Not enough room!"
+            console.log("Not enough room!")
         } else {
         this.passengers.push(Traveler)
         //console.log(this.passengers)
