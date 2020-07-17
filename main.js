@@ -50,6 +50,48 @@ class Wagon {
         for(let i = 0;i < this.passengers.length; i++) {
             total += foodArray[i]
         }
+        console.log(foodArray)
         return total
+    }
+}
+
+
+//Oregon trail Extended Cut: Director's Edition: Game Of The Year: Super ADeluxe: Gold: Edition feat. Dante from the Devil May Cry Series & Knuckles
+
+class Doctor extends Traveler {
+
+    heal(Traveler) {
+        return Traveler.isHealthy = true
+    }
+}
+
+class Hunter extends Traveler {
+    constructor(name,food = 2) {
+    super(name, food)
+        this.food = food
+    }
+    
+    hunt() {
+        return this.food += 5
+    }
+
+    eat() {
+        if(this.food < 2) {
+            this.food = 0
+            this.isHealthy = false
+        } else {
+            this.food -= 2
+        }
+    }
+
+    giveFood(Traveler, numOfFoodUnits) {
+        if(this.food < numOfFoodUnits) {
+            return "not enough food to trade"
+        } else {
+            this.food -= numOfFoodUnits
+            console.log(this.food)
+            Traveler.food += numOfFoodUnits
+            console.log(Traveler.food)
+        }
     }
 }
